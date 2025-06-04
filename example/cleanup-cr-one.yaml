@@ -1,0 +1,8 @@
+apiVersion: cleanup.makro.com/v1
+kind: EphemeralVolumePolicy
+metadata:
+  name: cleanup-policy-one
+  namespace: "default"
+spec:
+  cleanupPolicy: Always # Options: Always, OnPodCompletion, OnPodFailure
+  targetNamespaces: ["test", "default"]

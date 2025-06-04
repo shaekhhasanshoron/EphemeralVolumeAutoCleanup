@@ -1,0 +1,12 @@
+apiVersion: cleanup.makro.com/v1
+kind: EphemeralVolumePolicy
+metadata:
+  labels:
+    app.kubernetes.io/name: ephemeralvolumepolicy
+    app.kubernetes.io/instance: ephemeralvolumepolicy-sample
+    app.kubernetes.io/part-of: ephemeralvolumeautocleanup
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: ephemeralvolumeautocleanup
+  name: ephemeralvolumepolicy-sample
+spec:
+  # TODO(user): Add fields here

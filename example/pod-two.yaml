@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: emptydir-pod-two
+  namespace: test
+spec:
+  restartPolicy: Never
+  containers:
+    - name: data-writer
+      image: busybox
+      command:
+        - /bin/sh
+        - -c
+        - |
+          echo "Writing data to /data/output.txt..."
+          echo "Random value: $RANDOM" > /data/output.txt
+          echo "Sleeping for 5 seconds..."
+          sleep 5
+          exit 1
+      volumeMounts:
+        - mountPath: /data
+          name: storage
+  volumes:
+    - name: storage
+      emptyDir: {}

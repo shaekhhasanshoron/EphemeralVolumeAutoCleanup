@@ -1,0 +1,27 @@
+# permissions for end users to view ephemeralvolumepolicies.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: ephemeralvolumepolicy-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: ephemeralvolumeautocleanup
+    app.kubernetes.io/part-of: ephemeralvolumeautocleanup
+    app.kubernetes.io/managed-by: kustomize
+  name: ephemeralvolumepolicy-viewer-role
+rules:
+- apiGroups:
+  - cleanup.makro.com
+  resources:
+  - ephemeralvolumepolicies
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - cleanup.makro.com
+  resources:
+  - ephemeralvolumepolicies/status
+  verbs:
+  - get
