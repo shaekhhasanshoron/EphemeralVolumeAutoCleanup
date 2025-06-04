@@ -52,3 +52,7 @@ kubectl apply -f example/cleanup-cr-two.yaml
 kubectl apply -f example/pod-one.yaml
 kubectl apply -f example/pod-two.yaml
 ```
+
+## Live Recoding
+
+Click the link to watch the recording [https://asciinema.org/a/wPOVuJsQzBDIamwYWugvRjFNx](https://asciinema.org/a/wPOVuJsQzBDIamwYWugvRjFNx)
