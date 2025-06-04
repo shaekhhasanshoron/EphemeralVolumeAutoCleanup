@@ -14,17 +14,28 @@ make docker-build docker-push
 
 ### Deploy to Kubernetes
 
+Controller can be deployed using three approaches:
+
+**Using `Makefile`:**
+
 For deploying the controller to the K8s cluster specified in ~/.kube/config.
 ```
 make deploy
 ```
 
-or, manager manifests can be directly applied,
+**Using `kubectl`:**
+
+Manager manifests can be directly applied,
+
 ```
 kubectl apply -f kube/crd.yaml
 
 kubectl apply -f kube/manager.yaml
 ```
+
+**Using `Helm`:**
+
+Controller can be deployed using helm chart. For instructions, [click here](https://github.com/shaekhhasanshoron/ephemeral-volume-auto-cleanup-chart?tab=readme-ov-file#ephemeral-volume-auto-cleanup-helm-chart).
 
 ## Test Controller
 

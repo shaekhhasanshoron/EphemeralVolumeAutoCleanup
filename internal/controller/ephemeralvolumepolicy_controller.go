@@ -44,7 +44,7 @@ type EphemeralVolumePolicyReconciler struct {
 const (
 	PodCleanedLabelKey        = "ephemeral.cleanup/cleaned"
 	PodMangedByLabelKey       = "app.kubernetes.io/managed-by"
-	CleanupJobTTL       int32 = 30
+	CleanupJobTTL       int32 = 15
 )
 
 // +kubebuilder:rbac:groups=cleanup.makro.com,resources=ephemeralvolumepolicies,verbs=get;list;watch;create;update;patch;delete
